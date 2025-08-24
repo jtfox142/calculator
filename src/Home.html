@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <input type="text" id="userInputField" placeholder="Enter something...">
+        <button id="submitButton">Submit</button>
+        <p id="output"></p>
+
+        <script>
+            const inputField = document.getElementById("userInputField");
+            const submitButton = document.getElementById("submitButton");
+            const outputParagraph = document.getElementById("output");
+
+            submitButton.addEventListener("click", () => {
+                const userInputValue = inputField.value;
+                outputParagraph.textContent = `You entered: ${userInputValue}`;
+                inputField.value = ""; // Clear the input field
+            });
+        </script>
+    </body>
+    </html>
